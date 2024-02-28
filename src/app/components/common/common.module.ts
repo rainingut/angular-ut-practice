@@ -8,12 +8,8 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 
 @NgModule({
-  declarations: [
-    FuncCardComponent,
-  ],
-  exports: [
-    FuncCardComponent,
-  ],
+  declarations: [FuncCardComponent,],
+  exports: [FuncCardComponent,],
   imports: [
     CommonModule,
     NzCardModule,

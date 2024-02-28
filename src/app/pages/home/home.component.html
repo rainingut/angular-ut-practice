@@ -11,9 +11,12 @@
     justify-content: space-between;
     gap:10px; 
     width: 100%;">
-    <app-func-card
-    *ngFor="let person of data"
-    [person]="person"
-    style="flex:1;"
-    ></app-func-card>
+
+    <ng-container *ngFor="let person of data">
+        <app-func-card
+        *ngIf="person"
+        [person]="person"
+        style="flex:1;"
+        ></app-func-card>
+    </ng-container>
 </div>

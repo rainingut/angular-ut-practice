@@ -1,4 +1,5 @@
-  <nz-card [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+  <nz-card *ngIf="person"
+  [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
     <nz-skeleton [nzActive]="true" [nzLoading]="false" [nzAvatar]="{ size: 'large' }">
       <nz-card-meta
         [nzAvatar]="avatarTemplate"
