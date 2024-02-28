@@ -4,4 +4,16 @@
     [selectedMonth]="selectedMonth">
 </app-home-cards> -->
 
-<app-func-card></app-func-card>
+<div class="wrap" style="
+    background: #ECECEC;
+    padding:30px;
+    display: flex; 
+    justify-content: space-between;
+    gap:10px; 
+    width: 100%;">
+    <app-func-card
+    *ngFor="let person of data"
+    [person]="person"
+    style="flex:1;"
+    ></app-func-card>
+</div>

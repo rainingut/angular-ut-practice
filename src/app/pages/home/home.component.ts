@@ -162,4 +162,10 @@ export class HomeComponent {
     ],
   };
   selectedMonth = this.inputData.budgetDetails[3];
+
+  data = [
+    { name: 'John', age: 30, mail: 'john@example.com' },
+    { name: 'Alice', age: 25, mail: 'alice@example.com' },
+    { name: 'Bob', age: 35, mail: 'bob@example.com' },
+  ];
 }

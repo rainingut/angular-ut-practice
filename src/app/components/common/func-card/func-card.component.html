@@ -1,1 +1,22 @@
-<p>func-card works!</p>
+  <nz-card [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+    <nz-skeleton [nzActive]="true" [nzLoading]="false" [nzAvatar]="{ size: 'large' }">
+      <nz-card-meta
+        [nzAvatar]="avatarTemplate"
+        [nzTitle]="person.name"
+        [nzDescription]="person.mail"
+      ></nz-card-meta>
+    </nz-skeleton>
+  </nz-card>
+
+  <ng-template #avatarTemplate>
+    <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+  </ng-template>
+  <ng-template #actionSetting>
+    <span nz-icon nzType="setting" (click)="btnOnClick('setting')"></span>
+  </ng-template>
+  <ng-template #actionEdit>
+    <span nz-icon nzType="edit" (click)="btnOnClick('edit')"></span>
+  </ng-template>
+  <ng-template #actionEllipsis>
+    <span nz-icon nzType="ellipsis" (click)="btnOnClick('more')"></span>
+  </ng-template>
