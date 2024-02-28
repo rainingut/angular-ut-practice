@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let data of financialDatas">
+        <label >
+            <input type="checkbox"
+                [(ngModel)]="data.checked" 
+                (ngModelChange)="checkHandler($event)"
+            />
+            {{data.id}}
+        </label>
+    </li>
+</ul>
