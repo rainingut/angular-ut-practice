@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HomeCardsModule } from './home-cards/home-cards.module';
+import { CommonComponentModule } from 'src/app/components/common/common.module';
 
 
 @NgModule({
@@ -14,6 +15,8 @@ import { HomeCardsModule } from './home-cards/home-cards.module';
     CommonModule,
     HomeRoutingModule,
     HomeCardsModule,
+
+    CommonComponentModule,
   ],
   exports: [
     HomeComponent
