@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   inputData = {
     id: 31887,
     site: 'WHQ',
@@ -168,4 +168,21 @@ export class HomeComponent {
     { name: 'Alice', age: 25, mail: 'alice@example.com' },
     { name: 'Bob', age: 35, mail: 'bob@example.com' },
   ];
+
+  ngOnInit(): void {
+    fetch('https://api.github.com/search/users?q=Andy')
+    .then((response:any)=>response.json())
+    .then((data:any)=>{
+      this.data = data?.items
+      ?.filter((_:any, index:number)=>index<3)
+      ?.map((item:any)=>{
+        return {
+          name: item.login || '',
+          age: item.id,
+          mail: item.node_id
+        };
+      });
+    })
+  }
+
 }
